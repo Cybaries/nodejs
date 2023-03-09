@@ -1,3 +1,5 @@
+        // ----------Method 1--------------- (Preferred)
+const REQUEST_TIMEOUT = 500;
 
 const encrypt = (data) => {
     // encrypt data
@@ -11,4 +13,22 @@ const send = (url, data) => {
     return encryptedData
 }
 
-module.exports = { send }
+module.exports = { send, REQUEST_TIMEOUT }
+
+
+//------------------Method 2-----------------
+
+// module.exports.REQUEST_TIMEOUT = 500;
+
+// const encrypt = (data) => {
+//     // encrypt data
+//     return 'encrypted data'
+// }
+
+// module.exports.send = (url, data) => {
+//     const encryptedData = encrypt(data)
+//     // send encrypted data to url
+//     console.log(`Sending ${encryptedData} to ${url}`)
+//     return encryptedData
+// }
+

@@ -1,5 +1,5 @@
-const {send} = require('./request')
-const {read} = require('./response')
+import {send} from './37-request.mjs'
+import {read} from './37-response.mjs'
 
 const requests = (url, data) => {
     send(url, data)
