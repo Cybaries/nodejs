@@ -1,19 +1,19 @@
         // ----------Method 1--------------- (Preferred)
-const REQUEST_TIMEOUT = 500;
+// const REQUEST_TIMEOUT = 500;
 
-const encrypt = (data) => {
-    // encrypt data
-    return 'encrypted data'
-}
+// const encrypt = (data) => {
+//     // encrypt data
+//     return 'encrypted data'
+// }
 
-const send = (url, data) => {
-    const encryptedData = encrypt(data)
-    // send encrypted data to url
-    console.log(`Sending ${encryptedData} to ${url}`)
-    return encryptedData
-}
+// const send = (url, data) => {
+//     const encryptedData = encrypt(data)
+//     // send encrypted data to url
+//     console.log(`Sending ${encryptedData} to ${url}`)
+//     return encryptedData
+// }
 
-module.exports = { send, REQUEST_TIMEOUT }
+// module.exports = { send, REQUEST_TIMEOUT }
 
 
 //------------------Method 2-----------------
@@ -32,3 +32,13 @@ module.exports = { send, REQUEST_TIMEOUT }
 //     return encryptedData
 // }
 
+
+
+//-------------Lesson 44------------------
+
+const axios = require('axios')
+
+axios.get('https://www.google.com')
+    .then((response) => {
+        console.log(response);
+    })
