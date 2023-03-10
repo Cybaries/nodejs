@@ -1,4 +1,4 @@
-        // ----------Method 1--------------- (Preferred)
+// ------------------Method 1--------------- (Preferred)
 // const REQUEST_TIMEOUT = 500;
 
 // const encrypt = (data) => {
@@ -34,11 +34,17 @@
 
 
 
-//-------------Lesson 44------------------
+//---------------------Lesson 44---------------------
 
 const axios = require('axios')
 
 axios.get('https://www.google.com')
     .then((response) => {
         console.log(response);
+    })
+    .catch(err=>{
+    console.log(err);
+    })
+    .then(code => {
+        console.log(`All done`);
     })
